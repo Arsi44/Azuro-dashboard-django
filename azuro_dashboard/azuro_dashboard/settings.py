@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 # import secret
 load_dotenv(find_dotenv())
-SECRET_KEY = os.environ['SECRET_KEY_DJANGO']
+SECRET_KEY = "the key here!"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -125,7 +125,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+STATIC_ROOT = '/home/azuro/Azuro-dashboard-django/azuro_dashboard/static'
+MEDIA_ROOT = '/home/azuro/Azuro-dashboard-django/azuro_dashboard/media'
