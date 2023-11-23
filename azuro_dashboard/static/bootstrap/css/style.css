@@ -1,0 +1,52 @@
+:root {
+  --color-grey: #eee;
+  --color1: #1c76ff;
+  --color2: #BFA630;
+  --color3: #f6e49038;
+}
+
+body {
+  background-color: black;
+}
+
+section {
+padding-top: 20px;}
+
+/* Navbar */
+.my-navbar {
+    --bs-navbar-hover-color: #1c76ff;
+    --bs-navbar-color: rgb(0 0 0 / 65%);
+}
+
+/* Местоположение главной секции */
+.main-section {
+    position: absolute;
+    z-index: 1;
+    left: 10%;
+    right: 10%;
+}
+
+
+.my-btn:hover {
+    color: var(--bs-white);
+    background-color: var(--color2);
+}
+
+
+
+.font1 {
+    font-family: 'BasisGrotesquePro',Arial,sans-serif;
+}
+
+.my-padding-bottom {
+    padding-bottom: 60px
+}
+
+.bi {
+    font-size: 50px;
+    color: var(--color1);
+}
+
+
+#footer, #main {
+padding-top: 0px;}

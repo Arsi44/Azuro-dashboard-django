@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="shortcut icon" href="{% static 'bootstrap/img/PNG_500x500px.png' %}" type="image/x-icon">
+
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-social.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/fontello.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/style.css' %}">
+
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+
+<!--Navigation-->
+<nav id="my-navbar" class="navbar navbar-expand-lg navbar-light bg-light font1 sticky-top border-bottom my-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand px-5">
+            <img src="{% static 'bootstrap/img/PNG_500x500px.png' %}" alt="Логотип" class="logo-image"
+                 style="max-width: 100px; margin-left: 100px;">
+        </a>
+        <p class="fs-2" style="margin-top: 15px; color: #1c76ff;">Azuro Leaderboard</p>
+        <ul class="navbar-nav d-flex flex-row me-1" style="font-size: 30px;">
+            <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="https://discord.gg/azuro"><i class="fab fa-discord"></i></a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="https://twitter.com/azuroprotocol"><i class="fab fa-twitter-square"></i></a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="https://github.com/Azuro-protocol"><i class="fab fa-github"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!---->
+
+<!--Dashboard-->
+<section id="dashboard">
+    <div class="container mt-3">
+        <table class="table table-dark table-striped">
+            <thead>
+            <tr>
+                <th scope="col" class="text-center">Position</th>
+                <th scope="col" class="text-center">Ambassador</th>
+                <th scope="col" class="text-center">Total points</th>
+                <th scope="col" class="text-center">Azuro Last Raise FDV 150M</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for val in all_rows %}
+<!--            #-->
+            <tr class="text-center">
+                <td>{{ forloop.counter }}</td>
+                <td>{{ val.participant_name }}</td>
+                <td>{{ val.points }}</td>
+                <td>{{ val.cash }}</td>
+            </tr>
+            </tbody>
+            {% endfor %}
+
+        </table>
+    </div>
+</section>
+
+
+</body>
+</html>

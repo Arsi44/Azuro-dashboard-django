@@ -1,0 +1,4 @@
+/azuro_dashboard/.env
+/azuro_dashboard/db.sqlite3
+/azuro_dashboard/helpers/credentials.json
+/azuro_dashboard/helpers/token.json
