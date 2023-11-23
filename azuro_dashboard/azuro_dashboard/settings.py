@@ -29,7 +29,7 @@ SECRET_KEY = "the key here!"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['azuro.pythonanywhere.com', ]
 
 
 # Application definition
